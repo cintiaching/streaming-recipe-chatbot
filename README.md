@@ -20,8 +20,8 @@ A minimal FastAPI demo showing real-time LLM streaming with:
     ```
 2. Set up environment (I am using together.ai free model)
     ```bash
-    echo "TOGETHER_API_KEY=your_key" > .env
-    echo "MODEL=meta-llama/Llama-3.3-70B-Instruct-Turbo-Free" > .env
+    echo "TOGETHER_API_KEY=your_key" >> .env
+    echo "MODEL=meta-llama/Llama-3.3-70B-Instruct-Turbo-Free" >> .env
     ```
 
 3. Run the API
