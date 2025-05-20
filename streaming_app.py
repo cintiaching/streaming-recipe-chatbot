@@ -12,7 +12,8 @@ client = Together()
 
 
 def fake_search_recipes(dish: str):
-    return f"🧑‍🍳 Scanning 100+ {dish} recipes...\n"
+    time.sleep(1.2)
+    return None
 
 
 def fake_get_nutrition(dish: str):
@@ -32,8 +33,8 @@ def fake_save_to_db(dish: str, generated_recipe: str):
 def stream_recipe(dish: str):
     def generate():
         # PRE-STREAM
-        yield fake_search_recipes(dish)
-        time.sleep(1.2)
+        yield f"🧑‍🍳 Scanning 100+ {dish} recipes...\n"
+        fake_search_recipes(dish)
 
         # LLM STREAMING
         response = client.chat.completions.create(
