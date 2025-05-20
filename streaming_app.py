@@ -10,6 +10,7 @@ from dotenv import load_dotenv
 load_dotenv()
 app = FastAPI()
 client = Together()
+
 logger = logging.getLogger("uvicorn.error")
 logger.setLevel(logging.INFO)
 
