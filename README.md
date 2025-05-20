@@ -28,12 +28,15 @@ A minimal FastAPI demo showing real-time LLM streaming with:
    
    The streaming version:
     ```bash
-    uvicorn streaming_app:app --reload
-    curl -N "http://localhost:8000/recipe/stream/?dish=pasta"
-    ```
-   or the not streaming version:
+    uvicorn streaming_app:app --reload --log-level info
+   ```
+   In a new tab,
    ```bash
-    uvicorn not_streaming_app.main:app --reload
+   curl -N "http://localhost:8000/recipe/stream/?dish=pasta"
+   ```
+   Or the not-streaming version:
+   ```bash
+    uvicorn not_streaming_app.main:app --reload --log-level info
     curl -N "http://localhost:8000/recipe/not_stream/?dish=pasta"
     ```
    The time for running will show in log.
